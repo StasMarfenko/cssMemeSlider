@@ -1,0 +1,49 @@
+
+.wrap{
+    width: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+.cards {
+    /* display: flex; */
+    display: flex;
+    /* column-gap: 20px; */
+    width: 300px;
+    height: 100px;
+    background-color: rgb(112, 112, 112);
+    /* margin-left: 500px; */
+    /* overflow: hidden; */
+}
+.card{
+    width: 100px;
+    height: 100px;
+    /* background-color:red; */
+    overflow: hidden;
+    transition: .3s;
+}
+.card1{
+    background-color: #ff0073;
+}
+.card2{
+    /* margin-right: 200px; */
+    background-color: #0a902e;
+
+}
+.card3{
+    /* margin-right: 100px; */
+    background-color: #e9c201;
+}
+#item1:checked ~ .cards .card1{
+    margin-left: 0px;
+    transition: .3s;
+}
+#item2:checked ~ .cards .card2{
+    margin-left: -100px;
+    transition: .3s;
+}
+#item3:checked ~ .cards .card3{
+    margin-left: -200px;
+    transition: .3s;
+}
+
