@@ -1,49 +1,70 @@
 
 .wrap{
-    width: 100px;
+    width: 40rem;
     overflow: hidden;
     margin: 0 auto;
     text-align: center;
 }
 .cards {
-    /* display: flex; */
     display: flex;
-    /* column-gap: 20px; */
-    width: 300px;
-    height: 100px;
-    background-color: rgb(112, 112, 112);
-    /* margin-left: 500px; */
-    /* overflow: hidden; */
+    width: 200rem;
+    height: 30rem;
+    overflow: hidden;
 }
 .card{
-    width: 100px;
-    height: 100px;
-    /* background-color:red; */
+    width: 80rem;
     overflow: hidden;
-    transition: .3s;
+    transition: ease .3s;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+
 }
+
 .card1{
-    background-color: #ff0073;
+    background-image: url(images/item1.jpg);
 }
 .card2{
-    /* margin-right: 200px; */
-    background-color: #0a902e;
-
+    background-image: url(images/item5.jpg);
 }
 .card3{
-    /* margin-right: 100px; */
-    background-color: #e9c201;
+    background-image: url(images/item7.jpg);
+}
+.card4{
+    background-image: url(images/item2.jpg);
+}
+.card5{
+    background-image: url(images/item3.jpg);
 }
 #item1:checked ~ .cards .card1{
-    margin-left: 0px;
-    transition: .3s;
+    margin-left: 0rem;
+    background-size: cover;
+    animation: opacity 0.8s;
 }
 #item2:checked ~ .cards .card2{
-    margin-left: -100px;
-    transition: .3s;
+    margin-left: -40rem;
+    animation: opacity 0.3s;
 }
 #item3:checked ~ .cards .card3{
-    margin-left: -200px;
-    transition: .3s;
+    margin-left: -80rem;
+    animation: opacity 0.3s;
+}
+#item4:checked ~ .cards .card4{
+    margin-left: -120rem;
+    animation: opacity 0.3s;
+}
+#item5:checked ~ .cards .card5{
+    margin-left: -160rem;
+    animation: opacity 0.53s;
 }
 
+.slider-radio:checked ~ .cards .card{
+    width: 40rem;
+    background-size: cover;
+    transition: .5s;
+    
+}
+
+@keyframes opacity {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+   }
