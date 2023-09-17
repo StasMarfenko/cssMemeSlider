@@ -1,4 +1,12 @@
-
+.container{
+    background-color: rgb(41, 51, 62);
+    width: 50rem;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
 .wrap{
     width: 40rem;
     overflow: hidden;
@@ -17,7 +25,6 @@
     transition: ease .3s;
     /* background-size: cover; */
     background-repeat: no-repeat;
-
 }
 
 .card1{
@@ -38,7 +45,7 @@
 #item1:checked ~ .cards .card1{
     margin-left: 0rem;
     background-size: cover;
-    animation: opacity 0.8s;
+    animation: opacity 0.3s;
 }
 #item2:checked ~ .cards .card2{
     margin-left: -40rem;
@@ -63,8 +70,93 @@
     transition: .5s;
     
 }
-
+.slider-radio{
+    display: none;
+}
 @keyframes opacity {
     0% { opacity: 0; }
     100% { opacity: 1; }
    }
+   .dots-container {
+    /* align-self: end; */
+    /* align-items: end; */
+    display: flex;
+    justify-content: flex-end;
+    /* padding: 0 2rem 4rem; */
+    /* column-gap: 0.3rem; */
+    margin-top: 20px;
+}
+ 
+   .slider-dots:hover .slider-dots-item{
+    background: #ffffff;
+    transition: .3s;
+    outline: 0.2rem solid #fff;
+    /* cursor: pointer; */
+   }
+   .slider-dots:active .slider-dots-item{
+    background: #b4b4b4;
+    outline: 0.2rem solid #b4b4b4;
+   }
+
+
+   .slider-dots {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+    line-height: 3.5rem;
+}
+
+.slider-dots-item{
+    display: block;
+    text-align: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #6ea7f7;
+    border-radius: 50%;
+    margin: 0.7rem;
+    outline: 0.2rem solid #6ea7f7;
+    /* line-height: 3rem; */
+    }
+
+    #item1:checked ~ .dots-container .slider-dots .dot1{
+        background: #b4b4b400;
+        outline: 0.2rem solid #6ea7f7;
+        transition: .3s;
+    }
+    #item1:checked ~ .dots-container .slider-dots:hover .dot1{
+        outline: 0.2rem solid #fff;
+    }
+    #item2:checked ~ .dots-container .slider-dots .dot2{
+        background: #b4b4b400;
+        outline: 0.2rem solid #6ea7f7;
+        transition: .3s;
+    }
+    #item2:checked ~ .dots-container .slider-dots:hover .dot2{
+        outline: 0.2rem solid #fff;
+    }
+    #item3:checked ~ .dots-container .slider-dots .dot3{
+        background: #b4b4b400;
+        outline: 0.2rem solid #6ea7f7;
+        transition: .3s;
+    }
+    #item3:checked ~ .dots-container .slider-dots:hover .dot3{
+        outline: 0.2rem solid #fff;
+    }
+    #item4:checked ~ .dots-container .slider-dots .dot4{
+        background: #b4b4b400;
+        outline: 0.2rem solid #6ea7f7;
+        transition: .3s;
+    }
+    #item4:checked ~ .dots-container .slider-dots:hover .dot4{
+        outline: 0.2rem solid #fff;
+    }
+    #item5:checked ~ .dots-container .slider-dots .dot5{
+        background: #b4b4b400;
+        outline: 0.2rem solid #6ea7f7;
+        transition: .3s;
+    }
+    #item5:checked ~ .dots-container .slider-dots:hover .dot5{
+        outline: 0.2rem solid #fff;
+    }
