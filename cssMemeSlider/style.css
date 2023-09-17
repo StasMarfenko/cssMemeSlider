@@ -12,9 +12,11 @@
     overflow: hidden;
     margin: 0 auto;
     text-align: center;
+    transition: .3s;
 }
 .wrap2{
     display: flex;
+    transition: .3s;
 }
 .cards {
     display: flex;
@@ -22,13 +24,14 @@
     height: 30rem;
     overflow: hidden;
     border-radius: 1rem;
+    transition: .3s;
 }
 .card{
     border-radius: 1rem;
     width: 80rem;
     overflow: hidden;
     transition: ease .3s;
-    /* background-size: cover; */
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -37,6 +40,7 @@
 }
 .card2{
     background-image: url(images/item5.jpg);
+    
 }
 .card3{
     background-image: url(images/item7.jpg);
@@ -54,24 +58,29 @@
 }
 #item2:checked ~ .cards .card2{
     margin-left: -40rem;
+    background-size: cover;
     animation: opacity 0.3s;
 }
 #item3:checked ~ .cards .card3{
     margin-left: -80rem;
+    background-size: cover;
     animation: opacity 0.3s;
 }
 #item4:checked ~ .cards .card4{
     margin-left: -120rem;
+    background-size: cover;
     animation: opacity 0.3s;
 }
 #item5:checked ~ .cards .card5{
     margin-left: -160rem;
+    background-size: cover;
     animation: opacity 0.53s;
 }
 
 .slider-radio:checked ~ .cards .card{
     width: 40rem;
     background-size: cover;
+    background-position: center;
     transition: .5s;
     
 }
@@ -201,4 +210,66 @@
     }
     #item5:checked ~ .wrap2 .slider-titles-wrap .slider-titles .title5{
         margin-left: 80rem;
+    }
+
+    @media (max-width: 800px) {
+        .wrap2{
+            flex-direction: column-reverse;
+        }
+        .slider-titles-wrap {
+            padding: 20px;
+        }
+    
+        .dots-container {
+            justify-content: center;
+        }
+        .wrap{
+            max-width: 100%;
+            transition: .3s;
+            margin:4%;
+        }
+        .cards {
+            width: 500%;
+            height: 20rem;
+            transition: .3s;
+            /* column-gap: 1%; */
+        }
+        .card{
+            /* border-radius: 1rem; */
+            width: 100%;
+            transition: .3s;
+            background-size:auto;
+            overflow: hidden;
+        }
+        #item1:checked ~ .cards .card1{
+            margin-left: 0rem;
+            background-size: cover;
+            animation: opacity 0.3s;
+        }
+        #item2:checked ~ .cards .card2{
+            margin-left: -23%;
+        }
+        #item3:checked ~ .cards .card3{
+            margin-left: -46%;
+        }
+        #item4:checked ~ .cards .card4{
+            margin-left: -68%;
+        }
+        #item5:checked ~ .cards .card5{
+            margin-left: -90%;
+        }
+        .slider-radio:checked ~ .cards .card{
+            width: 100vw;
+            /* background-size: cover; */
+            transition: .5s;
+            border-radius: 1rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .cards {
+            width: 500%;
+            height: 15rem;
+            /* column-gap: 1%; */
+        }
     }
