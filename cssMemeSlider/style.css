@@ -217,7 +217,7 @@
             flex-direction: column-reverse;
         }
         .slider-titles-wrap {
-            padding: 20px;
+            padding: 1rem;
         }
     
         .dots-container {
